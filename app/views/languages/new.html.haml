@@ -1,0 +1,45 @@
+.language__page
+  = form_with(model: @language, local: true) do |f|
+    .language__tittle
+      = '本日学んだ言語をアウトプットしよう!!!'
+    .language__selectbox
+      .language__selectbox__tittle
+        %label
+          = 'タイトル'
+          %span.require 必須
+        %div
+          = f.text_field :tittle, class: 'tittle', required: "" , placeholder: 'タイトル(必須 40文字まで)'
+      .language__selectbox__language
+        %label
+          = '言語の種類'
+          %span.require 必須
+        %div.select-box.box
+          = f.collection_select :name_id, Name.all, :id, :name, {prompt: "---"},{required: "" }
+      .language__selectbox__day
+        %label
+          = '日付'
+          %span.require 必須
+        %div
+          = f.text_field :day, class: 'day', required: "" , placeholder: '日付(例: 2020/02/02)'
+      .language__selectbox__study
+        %label
+          = '学習時間'
+          %span.require 必須
+        %div.select-box.box
+          = f.collection_select :study_id, Study.all, :id, :name, {prompt: "---"},{required: "" }
+    .language__contentbox
+      .language__content
+        %label
+          = '学習内容'
+          %span.require 必須
+        %div
+          = f.text_area :content, class: 'content', required: "" , placeholder: '学習内容'
+    .language__imagebox
+      .language__image
+        = f.fields_for :images do |i|
+          .input-area 
+            = i.file_field :image, type: 'file'
+    .language__btn
+      = f.submit '投稿する', class: 'form-btn'
+      .back-btn
+        = link_to 'もどる', root_path

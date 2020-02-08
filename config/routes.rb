@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'users#index'
   # get 'users/index'
-  resources :language, only: [:index, :new, :create]
+  # post 'language/new' => 'language#create'
+  # get 'language/new' => 'language#new'
+  resources :languages, only: [:index, :new, :create]
 end
