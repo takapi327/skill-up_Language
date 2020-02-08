@@ -1,5 +1,6 @@
 class Image < ApplicationRecord
 
-  belongs_to :language
+  mount_uploader :image, ImageUploader
+  belongs_to :language,  optional: true
   
 end
