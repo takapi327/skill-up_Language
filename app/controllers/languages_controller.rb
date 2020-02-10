@@ -1,24 +1,29 @@
 class LanguagesController < ApplicationController
   def index
+    @languages = Language.includes(:user).order('created_at DESC').limit(10)
     @language = Language.new
   end
 
   def new
-    # binding.pry
     @language = Language.new
     @language.images.new
-    # @language.user = current_user
   end
 
   def create
-    # binding.pry
     @language = Language.new(language_params)
     if @language.images.present? && @language.save
-      # redirect_to root_path
-      redirect_to languages_path
+      redirect_to language_path(@language.id)
     else
-      redirect_to new_language_path
+      @language = Language.new
+      @language.images.new
+      flash.now[:alert] = '画像を入力してください。'
+      render :new
     end
+  end
+
+  def show
+    @language = Language.find(params[:id])
+    @images = Image.where(language_id: @language.id)
   end
 
   private

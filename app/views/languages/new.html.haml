@@ -20,7 +20,7 @@
           = '日付'
           %span.require 必須
         %div
-          = f.text_field :day, class: 'day', required: "" , placeholder: '日付(例: 2020/02/02)'
+          = f.date_field :day, class: 'day', required: "" , placeholder: '日付(例: 2020/02/02)'
       .language__selectbox__study
         %label
           = '学習時間'
@@ -33,7 +33,7 @@
           = '学習内容'
           %span.require 必須
         %div
-          = f.text_area :content, class: 'content', required: "" , placeholder: '学習内容'
+          = f.text_area :content, class: 'text_box', required: "" , placeholder: '学習内容'
     .language__imagebox
       .language__image
         = f.fields_for :images do |i|

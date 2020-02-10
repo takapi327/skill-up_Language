@@ -1,0 +1,17 @@
+.wrapper
+  -# = render "header.html.haml"
+  .language__detail
+    .language__detail__box
+      .language__detail__box__day
+        = "#{@language.day}"
+        = "#{@language.study.name}"
+        = "#{@language.name.name}"
+      .language__detail__box__tittle
+        = "#{@language.tittle}"
+      .language__detail__box__image
+        - @images.each do |i|
+          = image_tag i.image.to_s,width:100,height:100, class: "image"
+      .language__detail__box__content
+        = "#{@language.content}"
+      .back-btn
+        = link_to 'もどる', languages_path

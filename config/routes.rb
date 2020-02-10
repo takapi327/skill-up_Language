@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   # get 'users/index'
   # post 'language/new' => 'language#create'
   # get 'language/new' => 'language#new'
-  resources :languages, only: [:index, :new, :create]
+  resources :languages, only: [:index, :new, :create, :show]
 end
