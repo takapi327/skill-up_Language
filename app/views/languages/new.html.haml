@@ -28,17 +28,16 @@
         %div.select-box.box
           = f.collection_select :study_id, Study.all, :id, :name, {prompt: "---"},{required: "" }
     .language__contentbox
+      = '学習内容'
+      %span.require 必須
+      #preview-area　
       .language__content
-        %label
-          = '学習内容'
-          %span.require 必須
-        %div
-          = f.text_area :content, class: 'text_box', required: "" , placeholder: '学習内容'
-    .language__imagebox
-      .language__image
-        = f.fields_for :images do |i|
-          .input-area 
-            = i.file_field :image, type: 'file'
+        = f.text_area :content, class: 'text_box', required: "" , placeholder: "マークダウン記法で入力 例) ![画像名](http://画像のURL)", id: "md-textarea"
+    .preview__btn
+      .preview__btn__markdown
+        .btn#markdown.disabled markdown
+      .preview__btn__preview
+        .btn#preview preview
     .language__btn
       = f.submit '投稿する', class: 'form-btn'
       .back-btn
