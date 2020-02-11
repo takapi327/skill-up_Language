@@ -12,6 +12,6 @@
         - @images.each do |i|
           = image_tag i.image.to_s,width:100,height:100, class: "image"
       .language__detail__box__content
-        = "#{@language.content}"
+        = markdown("#{@language.content}").html_safe
       .back-btn
         = link_to 'もどる', languages_path
