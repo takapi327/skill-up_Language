@@ -7,4 +7,7 @@ Rails.application.routes.draw do
   # post 'language/new' => 'language#create'
   # get 'language/new' => 'language#new'
   resources :languages, only: [:index, :new, :create, :show]
+  namespace :api, format: 'json' do
+    get 'articles/preview'
+  end
 end
