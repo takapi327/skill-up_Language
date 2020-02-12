@@ -3,12 +3,13 @@
 @import "font-awesome";
 @import "flash";
 @import "user";
-.content.show{
-  display: flex;
-}
-.content{
-  display: none;
-}
+@import "mixin";
+@import "new/*";
+@import "user/*";
 .disabled{
   display: none;
+}
+
+*{
+  box-sizing: border-box;
 }

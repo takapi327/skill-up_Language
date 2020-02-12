@@ -1,0 +1,177 @@
+.language__page{
+  height: 100%;
+  padding: 50px 0;
+  label{
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .language__tittle{
+    font-size: 22px;
+    text-align: center;
+    margin: 0 50px 50px;
+  }
+  .language__pagebox{
+    width: 1200px;
+    margin: 0 auto;
+    @include require();
+    .language__tittlebox{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #2F4F4F;
+      text-align: center;
+      .tittle{
+        height: 50px;
+        width: 80%;
+        margin: 50px;
+        .tittle-field{
+          padding-left: 20px;
+          font-size: 18px;
+          width: 80%;
+          height: 50px;
+          background-color: rgba($color: #eee, $alpha: 0.5);
+          border: 0px solid #ccc;
+          -webkit-transition: 0.2s;
+          -moz-transition: 0.2s;
+          -o-transition: 0.2s;
+          transition: 0.2s;
+        }
+        .tittle-field:focus{
+          -webkit-transition: 0.2s;
+          -moz-transition: 0.2s;
+          -o-transition: 0.2s;
+          transition: 0.2s;
+          width: 85%;
+          background-color: white;
+        }
+      }
+    }
+    .language__selectbox{
+      display: flex;
+      text-align: center;
+      border-top: 1px solid #2F4F4F;
+      .language__selectbox__language{
+        width: 33%;
+        margin: 50px;
+      }
+      .language__selectbox__day{
+        width: 34%;
+        margin: 50px;
+      }
+      .language__selectbox__study{
+        width: 33%;
+        margin: 50px;
+      }
+      select{
+        height: 50px;
+        width: 60%;
+        background-color: rgba($color: #eee, $alpha: 0.5);
+        border: 0px solid #ccc;
+      }
+      .day{
+        height: 50px;
+        width: 60%;
+        background-color: rgba($color: #eee, $alpha: 0.5);
+        border: 0px solid #ccc;
+      }
+    }
+    .language__contentbox{
+      border-top: 1px solid #2F4F4F;
+      border-bottom: 1px solid #2F4F4F;
+      .contentbox__tittle{
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        .preview__btn{
+          background-color: #4689FF;
+          color: white;
+          height: 30px;
+          width: 100px;
+          border-radius: 5px;
+          margin-left: 20px;
+          cursor: pointer;
+          .btn{
+            text-align: center;
+            line-height: 30px;
+          }
+        }
+        .preview__btn:hover{
+          -webkit-transition: 0.4s;
+          -moz-transition: 0.4s;
+          -o-transition: 0.4s;
+          transition: 0.4s;
+          background-color: transparent;
+          border: 2px solid #998bfa;
+          color: #998bfa !important;
+          border-radius: 30px;
+        }
+      }
+      .language__content{
+        text-align: center;
+        margin-bottom: 40px;
+        .text_box{
+          padding: 20px;
+          border: 0px solid #ccc;
+          background-color: rgba($color: #eee, $alpha: 0.5);
+          font-size: 18px;
+          margin-top: 20px;
+          width: 1180px;
+          min-width: 1180px;
+          max-width: 1200px;
+          height: 500px;
+          min-height: 500px;
+          -webkit-transition: 0.2s;
+          -moz-transition: 0.2s;
+          -o-transition: 0.2s;
+          transition: 0.2s;
+        }
+        .text_box:focus{
+          -webkit-transition: 0.2s;
+          -moz-transition: 0.2s;
+          -o-transition: 0.2s;
+          transition: 0.2s;
+          width: 1200px;
+          height: 550px;
+          background-color: white;
+        }
+      }
+    }
+    .language__btn{
+      margin-top: 40px;
+      text-align: center;
+      .form-btn{
+        margin: 50px;
+        width: 200px;
+        height: 50px;
+        border: 0px solid #ccc;
+        background-color: #4689FF;
+        color: white;
+        border-radius: 50px;
+        cursor: pointer;
+        margin: 0 0 10px 0;
+        box-shadow: 0 5px #3B4BA8;
+      }
+      .form-btn:hover{
+        -ms-transform: translateY(5px);
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+        border-bottom: none;
+        box-shadow: none;
+      }
+      .back-btn a{
+        text-decoration: none;
+        color: #3B4BA8;
+        width: 200px;
+        display: block;
+        cursor: pointer;
+      }
+      .back-btn{
+        margin: 20px auto 0;
+        width: 200px;
+      }
+      .back-btn:hover{
+        background-color: rgba($color: #eee, $alpha: 0.8);
+      }
+    }
+  }
+}
