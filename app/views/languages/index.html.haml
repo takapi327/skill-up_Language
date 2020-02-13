@@ -1,43 +1,13 @@
-.wrapper
-  -# = render "header.html.haml"
-  .index
-    %ul.menu
-      %li.btn.active
-        %a#tab.menu_item HTNL&CSS
-      %li.btn
-        %a#tab.menu_item Ruby
-      %li.btn
-        %a#tab.menu_item JavaScript
-    %ul.contents
-      %li.content.show
-      - @languages.each do |language|
-        = link_to (language_path(language.id)) do
-          -# - if language.name_id == 1
-          .language__detail
-            .language__detail__box
-              .language__detail__box__day
-                = language.day
-                = language.study.name
-                = language.name.name
-              .language__detail__box__tittle
-                = language.tittle
-          -# - elsif language.name_id == 2
-          -#   %li.content
-          -#     .language__detail
-          -#       .language__detail__box
-          -#         .language__detail__box__day
-          -#           = language.day
-          -#           = language.study.name
-          -#           = language.name.name
-          -#         .language__detail__box__tittle
-          -#           = language.tittle
-          -# - elsif language.name_id == 3
-          -#   %li.content
-          -#     .language__detail
-          -#       .language__detail__box
-          -#         .language__detail__box__day
-          -#           = language.day
-          -#           = language.study.name
-          -#           = language.name.name
-          -#         .language__detail__box__tittle
-          -#           = language.tittle
+.language__detail
+  - @languages.each do |language|
+    = link_to (language_path(language.id)) do
+      -# - if language.name_id == 1
+      .language__detail__box
+        .language__detail__box__day
+          = language.day
+          = language.study.name
+          = language.name.name
+        .language__detail__box__tittle
+          = language.tittle
+.back-btn
+  = link_to 'もどる', root_path, class: 'back-btn'

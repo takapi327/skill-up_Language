@@ -73,3 +73,6 @@ gem 'active_hash'
 gem 'rails-i18n', '~> 5.1' 
 gem 'redcarpet'
 gem 'rouge'
+group :production do
+  gem 'unicorn', '5.4.1'
+end
