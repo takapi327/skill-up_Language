@@ -3,4 +3,9 @@
     .search
       = icon('fas', 'search-plus')
       = "検索"
+    .modal.js-modal
+      .modal__bg.js-modal-close
+      .modal__content
+        = text_field_tag :search, "", class: 'input-box__text', placeholder:"?????????"
+        %a.js-modal-close{href: ""} ???
     .menu
