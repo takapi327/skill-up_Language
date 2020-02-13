@@ -6,6 +6,8 @@
     .modal.js-modal
       .modal__bg.js-modal-close
       .modal__content
-        = text_field_tag :search, "", class: 'input-box__text', placeholder:"?????????"
+        = form_tag(searches_path, method: 'get') do
+          = text_field_tag :search, "", class: 'input-box__text', placeholder:"?????????"
+          = submit_tag 'Search', name: nil
         %a.js-modal-close{href: ""} ???
     .menu

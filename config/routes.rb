@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   namespace :api, format: 'json' do
     get 'articles/preview'
   end
+
+  resources :searches, only: [:index]
 end
