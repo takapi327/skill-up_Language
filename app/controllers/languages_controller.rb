@@ -2,6 +2,14 @@ class LanguagesController < ApplicationController
   def index
     @languages = Language.includes(:user).order('created_at DESC').limit(10)
     @language = Language.new
+    @html = Language.where(name_id: 1).order('created_at DESC')
+    @ruby = Language.where(name_id: 2).order('created_at DESC')
+    @javascript = Language.where(name_id: 3).order('created_at DESC')
+    @php = Language.where(name_id: 4).order('created_at DESC')
+    @java = Language.where(name_id: 5).order('created_at DESC')
+    @c = Language.where(name_id: 6).order('created_at DESC')
+    @python = Language.where(name_id: 7).order('created_at DESC')
+    @other = Language.where(name_id: 8).order('created_at DESC')
   end
 
   def new

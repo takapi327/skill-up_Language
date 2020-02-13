@@ -1,6 +1,5 @@
 $(function(){
   $('#preview').on('click', function(){
-    console.log('hello');
     var text = $('#md-textarea').val();
     if(text == ''){
       return;
@@ -12,14 +11,12 @@ $(function(){
       data: { body: text }
     })
     .done(function(html){
-      console.log('hello');
       $('#md-textarea').parent().css('display', 'none');
       $('#preview-area').append(html.body);
       $('#markdown').removeClass('disabled');
       $('#preview').addClass('disabled');
     })
     .fail(function(){
-      console.log('hello');
       alert('failed for markdown preview');
     })
   })

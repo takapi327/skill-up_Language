@@ -17,4 +17,10 @@
       text-align: center;
     }
   }
+  .content.show{
+    display: block;
+  }
+  .content{
+    display: none;
+  }
 }
