@@ -1,0 +1,14 @@
+.wrapper
+  -# = render "header.html.haml"
+  .language__detail
+    .language__detail__box
+      .language__detail__box__day
+        = "#{@language.day}"
+        = "#{@language.study.name}"
+        = "#{@language.name.name}"
+      .language__detail__box__tittle
+        = "#{@language.tittle}"
+      .language__detail__box__content
+        = markdown("#{@language.content}").html_safe
+      .back-btn
+        = link_to 'もどる', languages_path
