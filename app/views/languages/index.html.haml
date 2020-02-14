@@ -1,14 +1,4 @@
 .language__detail
-  -# - @languages.each do |language|
-  -#   = link_to (language_path(language.id)) do
-  -#     -# - if language.name_id == 1
-  -#     .language__detail__box
-  -#       .language__detail__box__day
-  -#         = language.day
-  -#         = language.study.name
-  -#         = language.name.name
-  -#       .language__detail__box__tittle
-  -#         = language.tittle
   %ul.menu
     %li
       %a#about.btn.active HTML&CSS
@@ -29,83 +19,27 @@
   %ul.contents
     %li.content.show
       - @html.each do |language|
-        = link_to (language_path(language.id)) do
-          .language__detail__box
-            .language__detail__box__day
-              = language.day
-              = language.study.name
-              = language.name.name
-            .language__detail__box__tittle
-              = language.tittle
+        = render partial: "language", locals: { language: language }
     %li.content
       - @ruby.each do |language|
-        = link_to (language_path(language.id)) do
-          .language__detail__box
-            .language__detail__box__day
-              = language.day
-              = language.study.name
-              = language.name.name
-            .language__detail__box__tittle
-              = language.tittle
+        = render partial: "language", locals: { language: language }
     %li.content
       - @javascript.each do |language|
-        = link_to (language_path(language.id)) do
-          .language__detail__box
-            .language__detail__box__day
-              = language.day
-              = language.study.name
-              = language.name.name
-            .language__detail__box__tittle
-              = language.tittle
+        = render partial: "language", locals: { language: language }
     %li.content
       - @php.each do |language|
-        = link_to (language_path(language.id)) do
-          .language__detail__box
-            .language__detail__box__day
-              = language.day
-              = language.study.name
-              = language.name.name
-            .language__detail__box__tittle
-              = language.tittle
+        = render partial: "language", locals: { language: language }
     %li.content
       - @java.each do |language|
-        = link_to (language_path(language.id)) do
-          .language__detail__box
-            .language__detail__box__day
-              = language.day
-              = language.study.name
-              = language.name.name
-            .language__detail__box__tittle
-              = language.tittle
+        = render partial: "language", locals: { language: language }
     %li.content
       - @c.each do |language|
-        = link_to (language_path(language.id)) do
-          .language__detail__box
-            .language__detail__box__day
-              = language.day
-              = language.study.name
-              = language.name.name
-            .language__detail__box__tittle
-              = language.tittle
+        = render partial: "language", locals: { language: language }
     %li.content
       - @python.each do |language|
-        = link_to (language_path(language.id)) do
-          .language__detail__box
-            .language__detail__box__day
-              = language.day
-              = language.study.name
-              = language.name.name
-            .language__detail__box__tittle
-              = language.tittle
+        = render partial: "language", locals: { language: language }
     %li.content
       - @other.each do |language|
-        = link_to (language_path(language.id)) do
-          .language__detail__box
-            .language__detail__box__day
-              = language.day
-              = language.study.name
-              = language.name.name
-            .language__detail__box__tittle
-              = language.tittle
+        = render partial: "language", locals: { language: language }
 .back-btn
-  = link_to 'もどる', root_path, class: 'back-btn'
+  = link_to 'もどる', root_path
