@@ -1,0 +1,16 @@
+.search__box
+  - if @language.present?
+    %h2.search__box__tittle
+      = @search
+      %span.search
+        の検索結果
+    .search__box__count
+      ="1-#{@language.count}件表示"
+  - else
+    %h2.search-result-nil
+      新着
+  .language__box
+    - @language.each do |language|
+      = render partial: "language", locals: { language: language }
+  .back-btn
+    = link_to 'もどる', root_path

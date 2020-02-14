@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   # get 'users/index'
   # post 'language/new' => 'language#create'
   # get 'language/new' => 'language#new'
-  resources :languages, only: [:index, :new, :create, :show]
+  resources :languages, only: [:index, :new, :create, :show] do
+    collection do
+      get 'search'
+    end
+  end
   namespace :api, format: 'json' do
     get 'articles/preview'
   end
