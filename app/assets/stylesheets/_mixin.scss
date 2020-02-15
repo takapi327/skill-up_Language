@@ -14,20 +14,40 @@
   .language__detail__box{
     color: black;
     background-color: #eee;
-    width: 500px;
-    margin: 10px;
+    width: 90%;
+    margin: 0 auto 10px;
     padding: 10px;
     border-radius: 10px;
-    .language__detail__box__day{
+    &__day{
       padding: 10px;
       text-align: center;
     }
-    .language__detail__box__image{
+    &__image{
       text-align: center;
     }
-    .language__detail__box__tittle{
+    &__tittle{
       padding: 10px;
       text-align: center;
     }
   }
+}
+
+@mixin userbtn(){
+  background-color: #DDDDDD;
+  color: white;
+  font-size: 3rem;
+  padding: 20px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  cursor: pointer;
+  box-shadow:rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+@mixin userhover(){
+  color: #4689FF;
+  background-color: white;
+  box-shadow: 10px 10px;
+  -webkit-transform: translateX(-10px) translateY(-10px);
+  -ms-transform: translateX(-10px) translateY(-10px);
+  transform: translateX(-10px) translateY(-10px);
 }
