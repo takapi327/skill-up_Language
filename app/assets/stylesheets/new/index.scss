@@ -1,11 +1,38 @@
 .language__detail{
-  display: flex;
-  flex-wrap: wrap;
-  @include language();
+  .menu{
+    display: flex;
+    justify-content: center;
+    background-color: #2F4F4F;
+    box-shadow:rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    margin-bottom: 50px;
+    .btn{
+      color: white;
+      padding: 20px;
+      cursor: pointer;
+    }
+    .btn:hover{
+      background-color: white;
+      color: #2F4F4F;
+    }
+  }
   .content.show{
     display: block;
+    text-align: center;
+    .language__count{
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    @include language();
   }
   .content{
     display: none;
   }
+}
+.back-btn{
+  margin: 20px auto;
+  width: 200px;
+  text-align: center;
+}
+.back-btn:hover{
+  background-color: rgba($color: #eee, $alpha: 0.8);
 }

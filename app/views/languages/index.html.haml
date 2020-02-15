@@ -1,44 +1,52 @@
 .language__detail
-  %ul.menu
-    %li
-      %a#about.btn.active HTML&CSS
-    %li
-      %a#service.btn Ruby
-    %li
-      %a#contact.btn JavaScript
-    %li
-      %a#about.btn.active PHP
-    %li
-      %a#service.btn Java
-    %li
-      %a#contact.btn C
-    %li
-      %a#about.btn.active Python
-    %li
-      %a#service.btn other
-  %ul.contents
-    %li.content.show
+  .menu
+    .btn.active HTML&CSS
+    .btn Ruby
+    .btn JavaScript
+    .btn PHP
+    .btn Java
+    .btn C
+    .btn Python
+    .btn other
+  .contents
+    .content.show
+      .language__count
+        ="HTML&CSS 1-#{@html.count}???"
       - @html.each do |language|
         = render partial: "language", locals: { language: language }
-    %li.content
+    .content
+      .language__count
+        ="Ruby 1-#{@ruby.count}???"
       - @ruby.each do |language|
         = render partial: "language", locals: { language: language }
-    %li.content
+    .content
+      .language__count
+        ="JavaScript 1-#{@javascript.count}???"
       - @javascript.each do |language|
         = render partial: "language", locals: { language: language }
-    %li.content
+    .content
+      .language__count
+        ="PHP 1-#{@php.count}???"
       - @php.each do |language|
         = render partial: "language", locals: { language: language }
-    %li.content
+    .content
+      .language__count
+        ="Java 1-#{@java.count}???"
       - @java.each do |language|
         = render partial: "language", locals: { language: language }
-    %li.content
+    .content
+      .language__count
+        ="C 1-#{@c.count}???"
       - @c.each do |language|
         = render partial: "language", locals: { language: language }
-    %li.content
+    .content
+      .language__count
+        ="Python 1-#{@python.count}???"
       - @python.each do |language|
         = render partial: "language", locals: { language: language }
-    %li.content
+    .content
+      .language__count
+        ="Other 1-#{@other.count}???"
       - @other.each do |language|
         = render partial: "language", locals: { language: language }
 .back-btn
