@@ -1,23 +1,23 @@
-// window.onload = ()=>{
+window.onload = ()=>{
   
-//   let tab = document.getElementsByClassName('btn');
+  let tab = document.getElementsByClassName('btn');
 
-//   tabsAry = Array.prototype.slice.call(tab);
+  tabsAry = Array.prototype.slice.call(tab);
 
-//   function tabSwich(){
-//     document.getElementsByClassName("active")[0].classList.remove("active");
+  function tabSwich(){
+    document.getElementsByClassName("active")[0].classList.remove("active");
 
-//     this.classList.add("active");
+    this.classList.add("active");
 
-//     document.getElementsByClassName("show")[0].classList.remove("show");
+    document.getElementsByClassName("show")[0].classList.remove("show");
 
-//     const index = tabsAry.indexOf(this);
+    const index = tabsAry.indexOf(this);
     
-//     document.getElementsByClassName("content")[index].classList.add("show");
-//   }
+    document.getElementsByClassName("content")[index].classList.add("show");
+  }
 
-//   tabsAry.forEach(function(value){
-//     value.addEventListener("click", tabSwich);
-//   });
+  tabsAry.forEach(function(value){
+    value.addEventListener("click", tabSwich);
+  });
 
-// }
+}

@@ -1,20 +1,11 @@
 .language__detail{
   display: flex;
   flex-wrap: wrap;
-  .language__detail__box{
-    color: black;
-    background-color: #eee;
-    width: 500px;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    .language__detail__box__day{
-      padding: 10px;
-      text-align: center;
-    }
-    .language__detail__box__tittle{
-      padding: 10px;
-      text-align: center;
-    }
+  @include language();
+  .content.show{
+    display: block;
+  }
+  .content{
+    display: none;
   }
 }

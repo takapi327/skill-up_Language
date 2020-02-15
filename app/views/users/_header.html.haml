@@ -1,6 +1,33 @@
 .header
   .header__box
-    .search
-      = icon('fas', 'search-plus')
-      = "検索"
-    .menu
+    .header__box__tittle
+      = link_to "Skill-up_Language", root_path
+    .modal.js-modal
+      .modal__bg.js-modal-close
+      .modal__content
+        = form_tag(search_languages_path, method: 'get') do
+          = text_field_tag :keyword, "", class: 'search-input', placeholder:"search"
+          .model__show.row
+          = submit_tag 'Search', class: 'submit'
+        %a.js-modal-close{href: ""} return
+.header__bottom
+  .header__bottom__box
+    .user__detail
+      .user__detail__box
+        - if user_signed_in?
+          .user__name
+            = current_user.name
+          .logout
+            = link_to 'Logout', destroy_user_session_path, method: :delete, class: "btn"
+        - else
+          .sign-up
+            = link_to "sign-up", new_user_registration_path, class: "btn"
+          .login
+            = link_to "Login", new_user_session_path, class: "btn"
+    .user__box
+      .user__box__btn
+        = link_to icon('far', 'paper-plane'), new_language_path
+      .user__box__btn
+        = icon('fas', 'search-plus')
+      .user__box__btn
+        = icon('far', 'user')

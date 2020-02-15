@@ -1,13 +1,45 @@
 .language__detail
-  - @languages.each do |language|
-    = link_to (language_path(language.id)) do
-      -# - if language.name_id == 1
-      .language__detail__box
-        .language__detail__box__day
-          = language.day
-          = language.study.name
-          = language.name.name
-        .language__detail__box__tittle
-          = language.tittle
+  %ul.menu
+    %li
+      %a#about.btn.active HTML&CSS
+    %li
+      %a#service.btn Ruby
+    %li
+      %a#contact.btn JavaScript
+    %li
+      %a#about.btn.active PHP
+    %li
+      %a#service.btn Java
+    %li
+      %a#contact.btn C
+    %li
+      %a#about.btn.active Python
+    %li
+      %a#service.btn other
+  %ul.contents
+    %li.content.show
+      - @html.each do |language|
+        = render partial: "language", locals: { language: language }
+    %li.content
+      - @ruby.each do |language|
+        = render partial: "language", locals: { language: language }
+    %li.content
+      - @javascript.each do |language|
+        = render partial: "language", locals: { language: language }
+    %li.content
+      - @php.each do |language|
+        = render partial: "language", locals: { language: language }
+    %li.content
+      - @java.each do |language|
+        = render partial: "language", locals: { language: language }
+    %li.content
+      - @c.each do |language|
+        = render partial: "language", locals: { language: language }
+    %li.content
+      - @python.each do |language|
+        = render partial: "language", locals: { language: language }
+    %li.content
+      - @other.each do |language|
+        = render partial: "language", locals: { language: language }
 .back-btn
-  = link_to 'もどる', root_path, class: 'back-btn'
+  = link_to 'もどる', root_path

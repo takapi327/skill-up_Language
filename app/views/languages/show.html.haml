@@ -8,6 +8,8 @@
         = "#{@language.name.name}"
       .language__detail__box__tittle
         = "#{@language.tittle}"
+      .language__detail__box__image
+        = image_tag("#{@language.images.first.image}", size: "300x300")
       .language__detail__box__content
         = markdown("#{@language.content}").html_safe
       .back-btn

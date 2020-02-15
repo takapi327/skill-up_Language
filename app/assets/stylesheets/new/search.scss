@@ -1,0 +1,24 @@
+.search__box{
+  background-color: #eee;
+  height: 250px;
+  position: relative;
+  padding: 0 100px;
+  z-index: -1; // モーダルウィンドウより前に出てきていたため
+  &__tittle{
+    font-size: 35px;
+    position: absolute;
+    bottom: 60px;
+    .search{
+      font-size: 20px;
+    }
+  }
+  &__count{
+    position: absolute;
+    bottom: 10px;
+  }
+}
+.language__box{
+  background-color: #2F4F4F;
+  padding: 40px;
+  @include language();
+}
