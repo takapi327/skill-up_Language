@@ -1,5 +1,5 @@
 $(function(){
-  $('.search').on('click',function(){
+  $('.fa-search-plus').on('click',function(){
       $('.js-modal').fadeIn();
       return false;
   });
@@ -54,9 +54,9 @@ $(function(){
       }
       // フォームに文字がないと削除する
       if(input.length == 0){
-        $(".model__show.row").empty();
+        search_list.empty();
       }
-      // if(search_list.length == 3){
+      // if(search_list.length == 4){
       //   console.log('hello');
       //   $(".model__show.row").next().empty();
       // }
