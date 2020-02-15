@@ -33,7 +33,8 @@ class LanguagesController < ApplicationController
   end
 
   def search
-    @language = Language.search(params[:keyword])
+    @languages = Language.search(params[:keyword])
+    @language = Language.search(params[:keyword]).limit(3)
     @search = params[:keyword]
     respond_to do |format|
       format.html
