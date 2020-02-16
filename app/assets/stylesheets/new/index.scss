@@ -15,6 +15,14 @@
       color: #2F4F4F;
     }
   }
+  .back-btn{
+    margin: 20px auto;
+    width: 200px;
+    text-align: center;
+  }
+  .back-btn:hover{
+    background-color: rgba($color: #eee, $alpha: 0.8);
+  }
   .content.show{
     display: block;
     text-align: center;
@@ -27,12 +35,4 @@
   .content{
     display: none;
   }
-}
-.back-btn{
-  margin: 20px auto;
-  width: 200px;
-  text-align: center;
-}
-.back-btn:hover{
-  background-color: rgba($color: #eee, $alpha: 0.8);
 }

@@ -6,10 +6,10 @@
       .modal__bg.js-modal-close
       .modal__content
         = form_tag(search_languages_path, method: 'get') do
-          = text_field_tag :keyword, "", class: 'search-input', placeholder:"search"
+          = text_field_tag :keyword, "", class: 'search-input', placeholder:"タイトルを検索"
           .model__show.row
-          = submit_tag 'Search', class: 'submit'
-        %a.js-modal-close{href: ""} return
+          = submit_tag '検索', class: 'submit'
+        %a.js-modal-close{href: ""} もどる
 .header__bottom
   .header__bottom__box
     .user__detail
