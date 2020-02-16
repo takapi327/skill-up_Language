@@ -18,7 +18,16 @@
   }
 }
 .language__box{
-  background-color: #2F4F4F;
+  // background-color: #2F4F4F;
   padding: 40px;
   @include language();
+}
+.back-btn{
+  margin: 20px auto;
+  width: 200px;
+  text-align: center;
+}
+
+.back-btn:hover{
+  background-color: rgba($color: #eee, $alpha: 0.8);
 }

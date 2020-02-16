@@ -24,25 +24,51 @@
     .user__detail{
       &__box{
         display: none;
-        .user__name{
-          font-size: 30px;
-          padding-top: 20px;
+        .detail-box{
+          display: flex;
+          .user__image{
+            margin: 50px;
+            border-radius: 50%;
+            background-color: #2F4F4F;
+            width: 200px;
+            height: 200px;
+          }
+          .user-box{
+            padding-top: 50px;
+            .user__name{
+              font-size: 30px;
+              margin-bottom: 20px;
+            }
+            .user-btn{
+              padding: 15px;
+              background-color: #3169d1;
+              color: #fff;
+              margin: 0 10px 10px 0;
+              box-shadow: 0 5px #3B4BA8;
+            }
+          }
         }
       }
     }
     .user__box{
       display: flex;
       &__btn{
+        .fa-search-plus{
+          @include userbtn()
+        }
+        .fa-search-plus:hover{
+          @include userhover()
+        }
         .fa-paper-plane{
           @include userbtn()
         }
         .fa-paper-plane:hover{
           @include userhover()
         }
-        .fa-search-plus{
+        .fa-book{
           @include userbtn()
         }
-        .fa-search-plus:hover{
+        .fa-book:hover{
           @include userhover()
         }
         .fa-user{
