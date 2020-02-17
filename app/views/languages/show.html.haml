@@ -1,5 +1,4 @@
-.wrapper
-  -# = render "header.html.haml"
+.nest
   .language__detail
     .language__detail__box
       .language__detail__box__day
@@ -9,8 +8,11 @@
       .language__detail__box__tittle
         = "#{@language.tittle}"
       .language__detail__box__image
-        = image_tag("#{@language.images.first.image}", size: "300x300")
+        = image_tag("#{@language.images.first.image}", size: "1000x500", class: "js-main-image")
+      .language__detail__box__imagebox
+        - @images.each do |i|
+          = image_tag i.image.to_s, size: "200x150", class: "js-sub-image"
       .language__detail__box__content
         = markdown("#{@language.content}").html_safe
-      .back-btn
-        = link_to 'もどる', languages_path
+    .back-btn
+      = link_to '???', languages_path

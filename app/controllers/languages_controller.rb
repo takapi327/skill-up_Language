@@ -1,15 +1,15 @@
 class LanguagesController < ApplicationController
   def index
-    @languages = Language.includes(:user).order('created_at DESC').limit(10)
-    @language = Language.new
-    @html = Language.where(name_id: 1).order('created_at DESC')
-    @ruby = Language.where(name_id: 2).order('created_at DESC')
-    @javascript = Language.where(name_id: 3).order('created_at DESC')
-    @php = Language.where(name_id: 4).order('created_at DESC')
-    @java = Language.where(name_id: 5).order('created_at DESC')
-    @c = Language.where(name_id: 6).order('created_at DESC')
-    @python = Language.where(name_id: 7).order('created_at DESC')
-    @other = Language.where(name_id: 8).order('created_at DESC')
+    @languages   = Language.includes(:user).order('created_at DESC').limit(10)
+    @language    = Language.new
+    @html        = current_user.languages.where(name_id: 1).order('created_at DESC')
+    @ruby        = current_user.languages.where(name_id: 2).order('created_at DESC')
+    @javascript  = current_user.languages.where(name_id: 3).order('created_at DESC')
+    @php         = current_user.languages.where(name_id: 4).order('created_at DESC')
+    @java        = current_user.languages.where(name_id: 5).order('created_at DESC')
+    @c           = current_user.languages.where(name_id: 6).order('created_at DESC')
+    @python      = current_user.languages.where(name_id: 7).order('created_at DESC')
+    @other       = current_user.languages.where(name_id: 8).order('created_at DESC')
   end
 
   def new
@@ -34,7 +34,7 @@ class LanguagesController < ApplicationController
 
   def search
     @languages = Language.search(params[:keyword])
-    @language = Language.search(params[:keyword]).limit(3)
+    @language = Language.search(params[:keyword]).order('created_at DESC').limit(3)
     @search = params[:keyword]
     respond_to do |format|
       format.html

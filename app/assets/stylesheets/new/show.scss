@@ -1,0 +1,35 @@
+.nest{
+  .language__detail{
+    padding-top: 50px;
+    &__box{
+      color: black;
+      background-color: #eee;
+      width: 90%;
+      margin: 0 auto 10px;
+      padding: 10px;
+      border-radius: 10px;
+      &__day{
+        padding: 10px;
+        text-align: center;
+        font-size: 20px;
+      }
+      &__image{
+        text-align: center;
+      }
+      &__imagebox{
+        text-align: center;
+        padding-bottom: 20px;
+      }
+      &__tittle{
+        padding: 10px;
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+      }
+      &__content{
+        background-color: white;
+        padding: 20px;
+      }
+    }
+  }
+}

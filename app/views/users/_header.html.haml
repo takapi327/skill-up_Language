@@ -31,9 +31,11 @@
     .user__box
       .user__box__btn
         = icon('fas', 'search-plus')
-      .user__box__btn
-        = link_to icon('far', 'paper-plane'), new_language_path
-      .user__box__btn
-        = link_to icon('fas', 'book'), languages_path
+      - if user_signed_in?
+        .user__box__btn
+          = link_to icon('far', 'paper-plane'), new_language_path
+        .user__box__btn
+          = link_to icon('fas', 'book'), languages_path
+      - else
       .user__box__btn
         = icon('far', 'user')

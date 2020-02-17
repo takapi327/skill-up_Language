@@ -56,10 +56,6 @@ $(function(){
       if(input.length == 0){
         search_list.empty();
       }
-      // if(search_list.length == 4){
-      //   console.log('hello');
-      //   $(".model__show.row").next().empty();
-      // }
     })
     .fail(function() {
       alert('error');
