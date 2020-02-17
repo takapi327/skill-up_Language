@@ -6,6 +6,7 @@ CarrierWave.configure do |config|
   if Rails.env.production?
     config.storage = :fog
     config.fog_provider = 'fog/aws'
+    config.fog_directory  = 'skill-up-language'
     config.fog_credentials = {
       provider: 'AWS',
       aws_access_key_id: Rails.application.credentials.aws[:access_key_id],
