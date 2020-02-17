@@ -16,7 +16,7 @@ CarrierWave.configure do |config|
     config.fog_directory  = 'skill-up-language'
     config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/skill-up-language'
   else
-    config.storage :file
+    config.storage = :file
     config.enable_processing = false if Rails.env.test?
   end
 end
