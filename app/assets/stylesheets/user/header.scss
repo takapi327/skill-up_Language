@@ -3,6 +3,7 @@
   &__box{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     &__tittle{
       padding-left: 20px;
       font-size: 25px;
@@ -11,6 +12,30 @@
     }
     &__tittle a{
       color: white;
+      font-weight: bold;
+    }
+    &__user{
+      display: flex;
+      .signup-btn{
+        color: white;
+        font-weight: bold;
+        padding: 20px;
+        margin-right: 50px;
+        cursor: pointer;
+      }
+      .login-btn{
+        color: white;
+        font-weight: bold;
+        padding: 20px;
+        margin-right: 50px;
+        cursor: pointer;
+      }
+      .signup-btn:hover{
+        opacity: 0.5;
+      }
+      .login-btn:hover{
+        opacity: 0.5;
+      }
     }
   }
   .model__show.row{

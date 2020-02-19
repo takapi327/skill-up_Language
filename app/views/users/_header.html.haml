@@ -1,14 +1,31 @@
 .header
   .header__box
     .header__box__tittle
-      = link_to "Skill-up_Language", root_path
+      = link_to "Skill-up-Language", root_path
+    .header__box__user
+      - if user_signed_in?
+      - else
+        .signup-btn
+          = "新規登録"
+        .login-btn
+          = "ログイン"
+    .signupmodal.js-signup
+      .modal__bg.js-signup-close
+      .signup__content
+        = render partial: "devise/registrations/signup"
+        %a.js-signup-close{href: ""} もどる
+    .loginmodal.js-login
+      .modal__bg.js-login-close
+      .login__content
+        = render partial: "devise/registrations/new"
+        %a.js-login-close{href: ""} もどる
     .modal.js-modal
       .modal__bg.js-modal-close
       .modal__content
         = form_tag(search_languages_path, method: 'get') do
           = text_field_tag :keyword, "", class: 'search-input', placeholder:"タイトルを検索"
           .model__show.row
-          = submit_tag '検索', class: 'submit'
+          = submit_tag '全てを確認する', class: 'submit'
         %a.js-modal-close{href: ""} もどる
 .header__bottom
   .header__bottom__box
@@ -21,7 +38,7 @@
             .user-box
               .user__name
                 = current_user.name
-              = link_to 'Mypage', '#', class: "user-btn"
+              = link_to 'Mypage', user_path(current_user.id), class: "user-btn"
               = link_to 'Logout', destroy_user_session_path, method: :delete, class: "user-btn"
         - else
           .detail-box
@@ -36,6 +53,6 @@
           = link_to icon('far', 'paper-plane'), new_language_path
         .user__box__btn
           = link_to icon('fas', 'book'), languages_path
+        .user__box__btn
+          = icon('far', 'user')
       - else
-      .user__box__btn
-        = icon('far', 'user')

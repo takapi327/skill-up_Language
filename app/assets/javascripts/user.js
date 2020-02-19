@@ -1,19 +1,21 @@
 $(function(){
 
-  $('.side__bar__box').on('click', function(){
-    $('.side__bar__box').not($(this)).next().animate({height:'hide'});
-    $(this).next().animate({height:'toggle'});
+  $('.login-btn').on('click',function(){
+    $('.js-login').fadeIn();
+    return false;
+  });
+  $('.js-login-close').on('click',function(){
+    $('.js-login').fadeOut();
+    return false;
   });
 
-  // $('.side__bar__box1').on('click', function(){
-  //   $('.side__bar__box1').not($(this)).next().animate({width:'hide'});
-  //   $(this).next().animate({width:'toggle'});
-  // });
-
-  $('.button').on('click', function(){
-    $('.button').not($(this)).next().animate({width:'hide'});
-    // $('.button').animate({width:'hide'});
-    $(this).next().animate({width:'toggle'});
+  $('.signup-btn').on('click',function(){
+    $('.js-signup').fadeIn();
+    return false;
   });
-    
+  $('.js-signup-close').on('click',function(){
+    $('.js-signup').fadeOut();
+    return false;
+  });
+      
 });
