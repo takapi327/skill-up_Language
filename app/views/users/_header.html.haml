@@ -5,6 +5,11 @@
     .header__box__user
       - if user_signed_in?
       - else
+        = form_for(:user, url: user_session_path) do |f|
+          = f.hidden_field :email, value: 'sample@gmail.com'
+          = f.hidden_field :password, value: 'test327'
+          = f.hidden_field :name, value: 'testさん'
+          = f.submit 'テストログイン', class: 'test'
         .signup-btn
           = "新規登録"
         .login-btn
