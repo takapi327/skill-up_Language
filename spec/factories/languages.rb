@@ -1,4 +1,5 @@
 FactoryBot.define do
+
   factory :language do
     tittle            {Faker::Name.last_name}
     name_id           {Faker::Number.between(from: 1, to: 8)}
@@ -7,4 +8,5 @@ FactoryBot.define do
     content           {Faker::Markdown.random}
     user_id           {Faker::Number.between(from: 1, to: 8)}
   end
+  
 end
