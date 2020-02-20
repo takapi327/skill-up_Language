@@ -6,7 +6,7 @@ FactoryBot.define do
     day               {Faker::Date.in_date_period}
     study_id          {Faker::Number.between(from: 1, to: 12)}
     content           {Faker::Markdown.random}
-    user_id           {Faker::Number.between(from: 1, to: 8)}
+    user
   end
   
 end
