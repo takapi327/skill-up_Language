@@ -1,1 +1,33 @@
-
+.List__display
+  .language__count
+    ="HTML&CSS 1-#{@html.count}件表示"
+  - @html.each do |language|
+    = render partial: "languages/language", locals: { language: language }
+  .language__count
+    ="Ruby 1-#{@ruby.count}件表示"
+  - @ruby.each do |language|
+    = render partial: "languages/language", locals: { language: language }
+  .language__count
+    ="JavaScript 1-#{@javascript.count}件表示"
+  - @javascript.each do |language|
+    = render partial: "languages/language", locals: { language: language }
+  .language__count
+    ="PHP 1-#{@php.count}件表示"
+  - @php.each do |language|
+    = render partial: "languages/language", locals: { language: language }
+  .language__count
+    ="Java 1-#{@java.count}件表示"
+  - @java.each do |language|
+    = render partial: "languages/language", locals: { language: language }
+  .language__count
+    ="C 1-#{@c.count}件表示"
+  - @c.each do |language|
+    = render partial: "languages/language", locals: { language: language }
+  .language__count
+    ="Python 1-#{@python.count}件表示"
+  - @python.each do |language|
+    = render partial: "languages/language", locals: { language: language }
+  .language__count
+    ="Other 1-#{@other.count}件表示"
+  - @other.each do |language|
+    = render partial: "languages/language", locals: { language: language }
