@@ -3,6 +3,8 @@ class Language < ApplicationRecord
   validates  :user_id, presence: true
   has_many :images, dependent: :delete_all
 
+  validates :tittle, :name_id, :day, :study_id, :content, presence: true
+
   accepts_nested_attributes_for :images, allow_destroy: true
 
   extend ActiveHash::Associations::ActiveRecordExtensions

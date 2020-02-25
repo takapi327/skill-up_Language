@@ -1,11 +1,11 @@
 $(function(){
   $('.fa-search-plus').on('click',function(){
-      $('.js-modal').fadeIn();
-      return false;
+    $('.js-modal').fadeIn();
+    return false;
   });
   $('.js-modal-close').on('click',function(){
-      $('.js-modal').fadeOut();
-      return false;
+    $('.js-modal').fadeOut();
+    return false;
   });
 
   // インクリメンタルサーチの記述

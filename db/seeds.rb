@@ -1,4 +1,5 @@
-languages = ["HTML", "CSS", "JavaScript"]
-languages.each do |language|
-  Language.create(name: language)
-end
+user = User.create!(
+  name:     'testさん',
+  email:    'sample@gmail.com',
+  password: 'test327',
+)
