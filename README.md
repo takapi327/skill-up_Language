@@ -65,25 +65,15 @@ Skill-up-Languageは日々の学習した内容を投稿して閲覧できます
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null:false|
+|tittle|string|null:false|
+|name_id|integer|null:false|
+|day|date|null:false|
+|study_id|integer|null:false|
+|content|text|null:false|
 
 ### Association
 - belongs_to :user
-- has_one :study
 - has_many :images
-
-## studiesテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|language_id|references|null:false|
-|day|data|null:false|
-|time|integer|null:false|
-|context|text|null:false|
-
-### Association
-
-- belongs_to :language
 
 ## imagesテーブル
 
