@@ -18,11 +18,13 @@ class LanguagesController < ApplicationController
   end
 
   def create
+    binding.pry
     @language = Language.new(language_params)
     if@language.images.present? && @language.save
       redirect_to language_path(@language.id)
     else
       @language = Language.new
+      @language.images.new
       render :new
     end
   end
