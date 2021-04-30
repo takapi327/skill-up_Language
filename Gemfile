@@ -85,7 +85,7 @@ gem 'rails-i18n', '~> 5.1'
 gem 'redcarpet'
 gem 'rouge'
 gem 'chart-js-rails', '~> 0.1.4'
-gem 'gon', '~> 6.2.0'
+gem 'gon', '~> 6.4.0'
 group :production do
   gem 'unicorn', '5.4.1'
 end
